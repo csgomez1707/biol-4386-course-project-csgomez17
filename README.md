@@ -14,6 +14,7 @@ What roles does jasmonic acid levels have in the transition to the adult phase i
 Image to reproduce: 
 
  
+![Screenshot(1)](https://user-images.githubusercontent.com/125313559/223488605-9250203a-15ab-41c4-a1aa-dd2929fedb98.png)
 
  
 
@@ -21,24 +22,43 @@ Fig 1. in mo17xB73 maize hybrid of leaf 1 at successive developmental time point
 
 This figure shows the endogenous concentration of JA, meJA, and GA at different successive developmental time points. L# shows the leaf formed, and the P# is the plastochron (developmental stage name). Combined this shows the different leaves as the plant grows and the developmental stage of each leave, we then look at the hormones expressed in each of these time points. We can see that JA and meJA are expressed highly at the first leaf at the later stages of development while in early development, all three hormones are found in similar levels. In the later leaves we see a switch, and GA is more present in later leaves in later developmental stages. 
 
-Materials and Methods: 
-
-    The experiments: 
-
-Plants were grown to show leaves 1–4 displayed only juvenile traits, leaves 5–7 were transition leaves, with the remaining leaves displaying adult characteristics. Then the emerging seedlings were treated with 100 μl of 5 mM JA in 5% ethanol at the apical whorl on 2 day intervals. Ear and tassel emergence were scored by counting leaves below the inflorescences. To measure the hormones the protocol from Pan, Welti, and Wang (2010) was used. Hormones were extracted from 100 mg pooled fresh leaf tissue at desired developmental time points. Tissue samples were harvested at the same time each day to consider the circadian variations in hormone levels. These tissue extracts were then purified with dichloromethane, dried, and resuspended in methanol. Hormone levels in each extract were determined using ultra-high-pressure liquid chromatography–tandem mass spectrometry (Acquity H-Class UPLC—Waters TQD). 
-
  
-
-    How will I obtain the data:  
+How will I obtain the data:  
 
 Data was given in the following table 
 
+![Screenshot](https://user-images.githubusercontent.com/125313559/223488169-97039e0f-5f9b-4500-b0c9-36af4b350e51.png)
+
+Materials and methods:
+
+Plant material and growth conditions: 
+
+For this set of experiments the Maize inbreds B73 and Mo17 were used to cross crossed to generate hybrid seeds. Plants were grown in a temperature-controlled greenhouse and illuminated for 14 hr daily under 1-kW metal halide and sodium lights B73xMo17 hybrids were used for quantifying hormones. Leaves 1–4 displayed only juvenile traits, leaves 5–7 were transition leaves, with the remaining leaves displaying adult characteristics. 
+
+Seedling treatment and scoring: 
+
+Emerging seedlings (first leaf ) received 100 μl of 5 mM JA in 5% ethanol to the apical whorl (apical shoot meristem). Control treatments were application of the same volume of solvent. Treatments with JA occurred at 2-day intervals. Ear and tassel emergence were scored by counting leaves. 
+
+Transcriptome analysis 
+
+The RNAseq dataset of maize dry seed to fourth leaf emerging was obtained from Yu et al., 2015. This experiment was conducted using White Crystal, a maize cultivar that has been shown to have high similarity in transcript levels with the Mo17xB73 hybrid used. The RNAseq dataset of 9-day old B73 maize leaf 3 was obtained from NCBI GEO series GSE54274. Transcript expression values were converted to per row color scale, and color breaks were calculated using data quantiles. 
+
+To obtain the heatmaps the pheatmaps package in R (version?) was used and genes were clustered using complete method and Euclidean distance. Candidate genes involved in juvenile JA signaling using  pBLAST with maize (taxid:4577) were found. Matches were scored using BLOSUM62 matrix with an e-value cutoff of 1e−5. 
+
+Hormone measurement: 
+
+The extraction protocol was derived from Pan, Welti, and Wang (2010). Hormones were extracted from 100 mg pooled fresh leaf tissue at desired developmental stage points using  2-propanol:H2O:HCl with dihydromethyljasmonate as an internal standard to adjust results for extraction efficiency. Tissue samples were harvested at the same time each day to account for circadian variations in hormone levels. Extracts were purified with dichloromethane, dried, and resuspended in methanol. Hormone levels in each extract were determined using ultra-high-pressure liquid chromatography–tandem mass spectrometry (Acquity H-Class UPLC—Waters TQD). 
+
  
 
-    Main steps needed: 
+Next steps: 
 
-    Look for raw data (without the means) 
+    Learn R and how to import, manage and use the data to replicate the graph in fig1. 
 
-    Graph into R 
+    Update github every week on any changes to the project 
 
-    Use Prism to create the graphs too 
+    Expand on the methodology and versions used 
+
+Github link: 
+
+https://github.com/csgomez17/JA-levels-in-developmental-transition.git  
